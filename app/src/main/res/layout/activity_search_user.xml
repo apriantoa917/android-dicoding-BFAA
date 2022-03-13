@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.search.UserSearchActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:logo="@drawable/ic_icons_github_toolbar"
+        app:title="@string/app_name"
+        app:titleMarginStart="25dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/container_search"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:focusableInTouchMode="true"
+        android:hint="@string/text_search_hint"
+        android:imeOptions="actionSearch"
+        android:padding="@dimen/default_size"
+        app:boxCornerRadiusBottomEnd="@dimen/corner"
+        app:boxCornerRadiusBottomStart="@dimen/corner"
+        app:boxCornerRadiusTopEnd="@dimen/corner"
+        app:boxCornerRadiusTopStart="@dimen/corner"
+        app:endIconMode="clear_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:startIconDrawable="@drawable/ic_baseline_search_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ed_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:maxLines="1" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_user"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/container_search"
+        android:paddingBottom="@dimen/default_size"
+        tools:itemCount="20"
+        tools:listitem="@layout/item_follow" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/illustration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/container_search">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="197dp"
+            android:layout_height="201dp"
+            android:src="@drawable/ic_icons_find_user"
+            app:layout_constraintBottom_toTopOf="@+id/label_illustration"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/text_illustartion" />
+
+        <TextView
+            android:id="@+id/label_illustration"
+            style="@style/label_illustration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginTop="@dimen/default_size"
+            android:text="@string/text_illustartion"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ProgressBar
+        android:id="@+id/loading"
+        style="@style/loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_corner"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/container_search" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

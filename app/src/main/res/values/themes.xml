@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.MyGithub" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.MyGithub" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/github_cyan_dark</item>
         <item name="colorPrimaryVariant">@color/github_cyan</item>
@@ -11,7 +11,6 @@
         <item name="colorOnSecondary">@color/github_dark_gray</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
-        <!-- Customize your theme here. -->
     </style>
 
     <style name="tv_username">
@@ -20,19 +19,46 @@
         <item name="android:textStyle">bold</item>
     </style>
 
+    <style name="background_splashsceen">
+        <item name="android:background">@color/github_cyan</item>
+    </style>
+
+    <style name="label_illustration">
+        <item name="android:textColor">@color/github_dark_gray</item>
+    </style>
+
     <style name="list_properties">
         <item name="android:textSize">@dimen/list_properties</item>
         <item name="android:layout_marginTop">@dimen/half_size</item>
+        <item name="android:layout_marginLeft">@dimen/half_size</item>
     </style>
 
     <style name="follow">
         <item name="android:textSize">@dimen/list_properties</item>
         <item name="android:textColor">@color/black</item>
         <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginTop">@dimen/half_size</item>
+        <item name="android:layout_marginLeft">@dimen/half_size</item>
+    </style>
+
+    <style name="tabslayout">
+        <item name="tabTextColor">@color/black</item>
+    </style>
+
+    <style name="toolbar">
+        <item name="android:background">@color/github_cyan</item>
+        <item name="android:theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
     </style>
 
     <style name="drawable">
         <item name="android:tint">@color/github_gray</item>
         <item name="backgroundColor">@color/transparant</item>
+    </style>
+
+    <style name="loading">
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:indeterminateTint">@color/github_cyan</item>
+        <item name="android:padding">30dp</item>
     </style>
 </resources>

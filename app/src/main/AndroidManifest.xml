@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.aprianto.mygithub">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,14 +11,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyGithub">
-        <activity android:name=".ActivityDetailUser"></activity>
-        <activity android:name=".ActivityListUser">
+        <activity android:name=".ui.splashscreen.SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ui.search.UserSearchActivity"/>
+        <activity
+            android:name=".ui.detail.DetailUserActivity"
+            android:parentActivityName=".ui.search.UserSearchActivity" />
     </application>
 
 </manifest>

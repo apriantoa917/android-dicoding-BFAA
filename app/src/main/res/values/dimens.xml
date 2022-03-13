@@ -4,4 +4,5 @@
     <dimen name="half_size">8dp</dimen>
     <dimen name="list_properties">15sp</dimen>
     <dimen name="ml_detail">30dp</dimen>
+    <dimen name="corner">12dp</dimen>
 </resources>

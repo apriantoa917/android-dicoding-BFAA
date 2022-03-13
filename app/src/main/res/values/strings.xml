@@ -1,115 +1,32 @@
 <resources>
+    <!--  constant value of apps name  -->
     <string name="app_name">My Github</string>
 
-    <string-array name="username">
-        <item>apriantoa917</item>
-        <item>JakeWharton</item>
-        <item>amitshekhariitbhu</item>
-        <item>romainguy</item>
-        <item>chrisbanes</item>
-        <item>tipsy</item>
-        <item>ravi8x</item>
-        <item>jasoet</item>
-        <item>budioktaviyan</item>
-        <item>hendisantika</item>
-        <item>sidiqpermana</item>
-    </string-array>
+    <!--  text = constant value appear on view  -->
+    <string name="text_followers">followers</string>
+    <string name="text_separator">•</string>
+    <string name="text_following">following</string>
+    <string name="text_repository">Repositories</string>
+    <string name="text_illustartion">Cari Nama Pengguna untuk melanjutkan :)</string>
+    <string name="text_search_hint">Cari Pengguna</string>
 
-    <string-array name="name">
-        <item>Aprianto</item>
-        <item>Jake Wharton</item>
-        <item>Amit Shekhar</item>
-        <item>Romain Guy</item>
-        <item>Chris Banes</item>
-        <item>David</item>
-        <item>Ravi Tamada</item>
-        <item>Deny Prasetyo</item>
-        <item>Budi Oktaviyan</item>
-        <item>Hendi Santika</item>
-        <item>Sidiq Permana</item>
-    </string-array>
+    <!--  var = preview value will be replaced  -->
+    <string name="var_name">Name</string>
+    <string name="var_username">\@username</string>
+    <string name="var_location">Location</string>
+    <string name="var_company">Company</string>
 
-    <string-array name="location">
-        <item>Surabaya, Jawa Timur</item>
-        <item>Pittsburgh, PA, USA</item>
-        <item>New Delhi, India</item>
-        <item>California</item>
-        <item>Sydney, Australia</item>
-        <item>Trondheim, Norway</item>
-        <item>India</item>
-        <item>Kotagede, Yogyakarta, Indonesia</item>
-        <item>Jakarta, Indonesia</item>
-        <item>Bojongsoang - Bandung Jawa Barat</item>
-        <item>Jakarta Indonesia</item>
-    </string-array>
+    <!--  constant value in popup menu -->
+    <string name="menu_lihat_profile">Lihat Profile</string>
+    <string name="menu_share_profile">Share Profile</string>
+    <string name="menu_lihat_repository">Lihat Repository</string>
 
-    <string-array name="repository">
-        <item>15</item>
-        <item>102</item>
-        <item>37</item>
-        <item>9</item>
-        <item>30</item>
-        <item>56</item>
-        <item>28</item>
-        <item>44</item>
-        <item>110</item>
-        <item>1064</item>
-        <item>65</item>
-    </string-array>
+    <!--  text will replace with integer value  -->
+    <string name="dummy_int">100</string>
 
-    <string-array name="company">
-        <item>Picnicker Indonesia</item>
-        <item>Google, Inc.</item>
-        <item>MindOrksOpenSource</item>
-        <item>Google</item>
-        <item>Google working on @android</item>
-        <item>Working Group Two</item>
-        <item>AndroidHive | Droid5</item>
-        <item>gojek-engineering</item>
-        <item>KotlinID</item>
-        <item>JVMDeveloperID @KotlinID @IDDevOps</item>
-        <item>Nusantara Beta Studio</item>
-    </string-array>
-
-    <string-array name="followers">
-        <item>12</item>
-        <item>56995</item>
-        <item>5153</item>
-        <item>7972</item>
-        <item>14725</item>
-        <item>788</item>
-        <item>18628</item>
-        <item>277</item>
-        <item>178</item>
-        <item>428</item>
-        <item>465</item>
-    </string-array>
-
-    <string-array name="following">
-        <item>10</item>
-        <item>12</item>
-        <item>2</item>
-        <item>0</item>
-        <item>1</item>
-        <item>0</item>
-        <item>3</item>
-        <item>39</item>
-        <item>23</item>
-        <item>61</item>
-        <item>10</item>
-    </string-array>
-
-    <string-array name="avatar">
-        <item>@drawable/user0</item>
-        <item>@drawable/user1</item>
-        <item>@drawable/user2</item>
-        <item>@drawable/user3</item>
-        <item>@drawable/user4</item>
-        <item>@drawable/user5</item>
-        <item>@drawable/user6</item>
-        <item>@drawable/user7</item>
-        <item>@drawable/user8</item>
-        <item>@drawable/user9</item>
-        <item>@drawable/user10</item>
-    </string-array>
+    <!--  content description of icon  -->
+    <string name="icon_location">icon location</string>
+    <string name="icon_company">icon company</string>
+    <string name="icon_repository">icon repository</string>
+    <string name="icon_social">icon social</string>
 </resources>

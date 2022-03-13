@@ -16,4 +16,6 @@
     <color name="github_gray">#666666</color>
     <color name="github_dark_gray">#3c3c3c</color>
     <color name="transparant">#00FFFFFF</color>
+    <color name="light_gray">#F4F4F4</color>
+    <color name="light_blue">#CFFAFF</color>
 </resources>
