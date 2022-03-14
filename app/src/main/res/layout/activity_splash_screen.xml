@@ -17,7 +17,8 @@
         app:layout_constraintStart_toStartOf="@+id/tv_title"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="packed"
-        android:layout_marginBottom="30dp"/>
+        android:layout_marginBottom="30dp"
+        android:contentDescription="@string/icon_github" />
 
     <TextView
         android:id="@+id/tv_title"
@@ -37,7 +38,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="40dp"
-        android:text="© 2022 Aprianto"
+        android:text="@string/text_copyright"
         android:textColor="@color/white"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
