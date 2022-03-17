@@ -55,6 +55,7 @@ class UserFavoriteActivity : AppCompatActivity() {
                 val username = favoriteAdapter.getSwipedUsername(position)
                 binding.rvFavorite.adapter?.let {
                     it.notifyItemRemoved(position)
+                    it.notifyDataSetChanged()
                     viewModel.unsetFavorite(username)
                     Helper.toast(this@UserFavoriteActivity, "$username dihapus dari favorite")
                 }
