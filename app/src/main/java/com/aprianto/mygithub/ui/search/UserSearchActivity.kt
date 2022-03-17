@@ -1,7 +1,10 @@
 package com.aprianto.mygithub.ui.search
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.KeyEvent
+import android.view.Menu
+import android.view.MenuItem
 import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import androidx.activity.viewModels
@@ -10,7 +13,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.aprianto.mygithub.*
 import com.aprianto.mygithub.data.viewmodel.UserSearchViewModel
 import com.aprianto.mygithub.databinding.ActivitySearchUserBinding
-import com.aprianto.mygithub.utils.Constanta
+import com.aprianto.mygithub.ui.favorite.UserFavoriteActivity
+import com.aprianto.mygithub.ui.setting.SettingsActivity
+import com.aprianto.mygithub.utils.Helper
 
 
 class UserSearchActivity : AppCompatActivity() {
@@ -26,21 +31,16 @@ class UserSearchActivity : AppCompatActivity() {
         binding = ActivitySearchUserBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        supportActionBar?.let {
-            it.setTitle(R.string.app_name)
-            it.setLogo(R.drawable.ic_launcher_foreground)
-            it.setDisplayUseLogoEnabled(true)
-            it.setDisplayShowHomeEnabled(true)
-        }
+        setSupportActionBar(binding.toolbar)
 
         viewModel.apply {
             loading.observe(context, { binding.loading.visibility = it })
             illustration.observe(context, { binding.illustration.visibility = it })
-            error.observe(context, { Constanta.toastError(context, it) })
+            error.observe(context, { Helper.toast(context, it) })
             resultData.observe(context, { data ->
                 rvAdapter.apply {
                     // jika data search null -> tidak menampilkan apapun
-                    if(data.isNullOrEmpty()) clearData() else initData(data)
+                    if (data.isNullOrEmpty()) clearData() else initData(data)
                     notifyDataSetChanged()
                 }
             })
@@ -76,6 +76,27 @@ class UserSearchActivity : AppCompatActivity() {
                 }
             }
             return@setOnKeyListener false
+        }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.activity_search_menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.menu_favorite -> {
+                val intent = Intent(this@UserSearchActivity,UserFavoriteActivity::class.java)
+                startActivity(intent)
+                true
+            }
+            R.id.menu_setting -> {
+                val intent = Intent(this@UserSearchActivity,SettingsActivity::class.java)
+                startActivity(intent)
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
         }
     }
 }

@@ -7,16 +7,17 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.aprianto.mygithub.data.viewmodel.UserDetailViewModel
+import com.aprianto.mygithub.data.viewmodel.UserSocialViewModel
 import com.aprianto.mygithub.databinding.FragmentFollowBinding
 import com.aprianto.mygithub.utils.Constanta
+import com.aprianto.mygithub.utils.Helper
 
 class FragmentFollow : Fragment() {
 
     private var username: String = "github"
     private var followMode: String = "followers"
     private val rvAdapter = UserSocialAdapter()
-    private val viewModel: UserDetailViewModel by viewModels()
+    private val viewModel: UserSocialViewModel by viewModels()
     private lateinit var binding: FragmentFollowBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -48,7 +49,7 @@ class FragmentFollow : Fragment() {
             loading.observe(viewLifecycleOwner, { binding.loading.visibility = it })
             error.observe(
                 viewLifecycleOwner,
-                { context?.let { context -> Constanta.toastError(context, it) } })
+                { context?.let { context -> Helper.toast(context, it) } })
             socialData.observe(viewLifecycleOwner, {
                 rvAdapter.apply {
                     initData(it)

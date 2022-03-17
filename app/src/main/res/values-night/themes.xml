@@ -39,6 +39,19 @@
         <item name="popupTheme">@style/ThemeOverlay.AppCompat.Dark</item>
     </style>
 
+    <style name="search_box_container" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:background">@color/github_dark_gray</item>
+        <item name="hintTextColor">@color/light_gray</item>
+        <item name="boxStrokeColor">@color/light_gray</item>
+        <item name="startIconTint">@color/light_gray</item>
+        <item name="endIconTint">@color/light_gray</item>
+        <item name="android:textColorHint">@color/light_gray</item>
+    </style>
+
+    <style name="search_box_edittext" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:textColor">@color/light_gray</item>
+    </style>
+
     <style name="follow">
         <item name="android:textColor">@color/white</item>
         <item name="android:textSize">@dimen/list_properties</item>
@@ -56,5 +69,14 @@
         <item name="android:layout_centerInParent">true</item>
         <item name="android:indeterminateTint">@color/github_gray</item>
         <item name="android:padding">30dp</item>
+    </style>
+
+    <style name="btn_favorite">
+        <item name="backgroundTint">@color/github_cyan</item>
+        <item name="rippleColor">@color/white</item>
+    </style>
+
+    <style name="alert_favorite">
+        <item name="android:background">@drawable/shape_alert_night</item>
     </style>
 </resources>

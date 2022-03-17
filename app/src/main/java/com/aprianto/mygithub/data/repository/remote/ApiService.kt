@@ -1,7 +1,7 @@
-package com.aprianto.mygithub.data.repository
+package com.aprianto.mygithub.data.repository.remote
 
 import com.aprianto.mygithub.data.model.UserDetail
-import com.aprianto.mygithub.UserSocialResult
+import com.aprianto.mygithub.data.model.UserSocialResult
 import com.aprianto.mygithub.UserSearch
 import com.aprianto.mygithub.utils.Constanta
 import retrofit2.Call

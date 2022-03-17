@@ -1,0 +1,18 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        android:icon="@drawable/ic_baseline_sun_24"
+        app:title="Tampilan Pengguna">
+
+        <ListPreference
+            app:defaultValue="auto"
+            app:entries="@array/theme_mode"
+            app:entryValues="@array/theme_mode"
+            app:key="@string/pref_setting_theme"
+            app:title="Dark Mode"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

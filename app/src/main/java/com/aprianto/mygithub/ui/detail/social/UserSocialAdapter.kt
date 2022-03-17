@@ -8,7 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.aprianto.mygithub.R
-import com.aprianto.mygithub.UserSocialResult
+import com.aprianto.mygithub.data.model.UserSocialResult
 import com.bumptech.glide.Glide
 
 class UserSocialAdapter :
@@ -44,7 +44,7 @@ class UserSocialAdapter :
         data = socialData.toMutableList()
     }
 
-    class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+    inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         var tvUsername: TextView = itemView.findViewById(R.id.tv_username)
         var imgAvatar: ImageView = itemView.findViewById(R.id.img_avatar)
     }

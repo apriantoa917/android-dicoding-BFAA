@@ -6,7 +6,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.aprianto.mygithub.UserSearch
 import com.aprianto.mygithub.UserSearchResult
-import com.aprianto.mygithub.data.repository.ApiConfig
+import com.aprianto.mygithub.data.repository.remote.ApiConfig
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -53,7 +53,7 @@ class UserSearchViewModel : ViewModel() {
     }
 
     companion object {
-        private const val TAG = "UserSearchViewModel"
+        private val TAG = UserSearchViewModel::class.simpleName
     }
 
 }

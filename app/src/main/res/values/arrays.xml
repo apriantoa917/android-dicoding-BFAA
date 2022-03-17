@@ -1,0 +1,9 @@
+<resources>
+    <!-- Dark Mode Theme -->
+    <string-array name="theme_mode">
+        <item>auto</item>
+        <item>light</item>
+        <item>dark</item>
+    </string-array>
+
+</resources>

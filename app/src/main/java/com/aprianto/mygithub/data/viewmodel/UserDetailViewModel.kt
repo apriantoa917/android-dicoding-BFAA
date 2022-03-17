@@ -1,51 +1,44 @@
 package com.aprianto.mygithub.data.viewmodel
 
+import android.app.Application
 import android.util.Log
-import android.view.View
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.aprianto.mygithub.UserSocialResult
 import com.aprianto.mygithub.data.model.UserDetail
-import com.aprianto.mygithub.data.repository.ApiConfig
-import com.aprianto.mygithub.utils.Constanta
+import com.aprianto.mygithub.data.model.UserFavorite
+import com.aprianto.mygithub.data.repository.remote.ApiConfig
+import com.aprianto.mygithub.data.repository.userfavorite.UserFavoriteRepository
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class UserDetailViewModel : ViewModel() {
+class UserDetailViewModel(application: Application) : ViewModel() {
 
-    val socialData = MutableLiveData<List<UserSocialResult>>()
+    private val mUserFavoriteRepository = UserFavoriteRepository(application)
     val userData = MutableLiveData<UserDetail>()
-    val loading = MutableLiveData(View.VISIBLE)
+    val userFavorite = MutableLiveData<UserFavorite>()
     val error = MutableLiveData<String>()
+    val isFavorite = MutableLiveData<Boolean>()
 
-    fun setSocialData(followMode: String, username: String) {
-        val client = when (followMode) {
-            Constanta.EXTRA_FOLLOWERS -> ApiConfig.getApiService().getUserFollowers(username)
-            else -> ApiConfig.getApiService().getUserFollowing(username)
-        }
-        client.enqueue(object : Callback<List<UserSocialResult>> {
-            override fun onResponse(
-                call: Call<List<UserSocialResult>>,
-                response: Response<List<UserSocialResult>>
-            ) {
-                if (response.isSuccessful) {
-                    val data = response.body()
-                    socialData.postValue(data)
-                    loading.postValue(View.GONE)
-                } else {
-                    Log.e(TAG, "onFailure: ${response.message()}")
-                    error.postValue(response.message())
-                }
-            }
-
-            override fun onFailure(call: Call<List<UserSocialResult>>, t: Throwable) {
-                Log.e(TAG, "onFailure: $t")
-                error.postValue(t.message)
-            }
-        })
+    fun setFavorite(favorite: UserFavorite) {
+        mUserFavoriteRepository.setFavorite(favorite)
     }
 
+    fun unsetFavorite(username:String) {
+        mUserFavoriteRepository.unsetFavorite(username)
+    }
+
+    // inisialisasi sementara data untuk favorite
+    fun initFavorite(favorite: UserFavorite) {
+        userFavorite.postValue(favorite)
+    }
+
+    // jalankan query untuk check apakah user di like
+    fun checkFavorite(username: String): LiveData<UserFavorite> =
+        mUserFavoriteRepository.checkFavorite(username)
+
+    // load data detail user dari API
     fun setUserData(username: String) {
         val client = ApiConfig.getApiService().getDetailUser(username)
         client.enqueue(object : Callback<UserDetail> {
@@ -72,7 +65,6 @@ class UserDetailViewModel : ViewModel() {
     }
 
     companion object {
-        private const val TAG = "UserDetailViewModel"
+        private val TAG =  UserDetailViewModel::class.simpleName
     }
-
 }

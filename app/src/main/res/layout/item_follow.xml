@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginHorizontal="@dimen/default_size"
@@ -23,8 +22,8 @@
         android:id="@+id/tv_username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/half_size"
-        android:text="\@username"
+        android:layout_marginStart="@dimen/half_size"
+        android:text="@string/var_username"
         android:textSize="13sp"
         android:textStyle="bold"
         card_view:layout_constraintBottom_toBottomOf="parent"

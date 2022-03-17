@@ -1,4 +1,4 @@
-package com.aprianto.mygithub.data.repository
+package com.aprianto.mygithub.data.repository.remote
 
 import androidx.viewbinding.BuildConfig
 import okhttp3.OkHttpClient

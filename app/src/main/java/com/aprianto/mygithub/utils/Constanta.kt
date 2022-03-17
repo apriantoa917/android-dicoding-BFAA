@@ -1,9 +1,6 @@
 package com.aprianto.mygithub.utils
 
-import android.content.Context
-import android.widget.Toast
 import androidx.annotation.StringRes
-import com.aprianto.mygithub.BuildConfig
 import com.aprianto.mygithub.R
 
 object Constanta {
@@ -17,9 +14,7 @@ object Constanta {
     const val EXTRA_FOLLOW_MODE = "followers"
     const val EXTRA_FOLLOWERS = "followers"
     const val EXTRA_FOLLOWING = "following"
-    const val GITHUB_PAT = BuildConfig.GITHUB_TOKEN
+    const val GITHUB_REQUEST_HEADERS = "Authorization: token ${com.aprianto.mygithub.BuildConfig.GITHUB_TOKEN}"
 
-    fun toastError(context:Context, message:String){
-        Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
-    }
+
 }

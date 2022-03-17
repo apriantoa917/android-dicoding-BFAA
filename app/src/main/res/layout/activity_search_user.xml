@@ -16,11 +16,12 @@
         app:layout_constraintTop_toTopOf="parent"
         app:logo="@drawable/ic_icons_github_toolbar"
         app:title="@string/app_name"
-        app:titleMarginStart="25dp" />
+        app:titleMarginStart="25dp"
+        app:menu="@menu/activity_search_menu"/>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/container_search"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        style="@style/search_box_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:focusable="false"
@@ -40,6 +41,7 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/ed_search"
+            style="@style/search_box_edittext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:imeOptions="actionSearch"
@@ -52,11 +54,11 @@
         android:id="@+id/rv_user"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:paddingBottom="@dimen/default_size"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/container_search"
-        android:paddingBottom="@dimen/default_size"
         tools:itemCount="20"
         tools:listitem="@layout/item_follow" />
 
@@ -67,18 +69,19 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/container_search">
+        app:layout_constraintTop_toBottomOf="@+id/container_search"
+        android:elevation="-2dp">
 
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="197dp"
             android:layout_height="201dp"
+            android:contentDescription="@string/text_illustartion"
             android:src="@drawable/ic_icons_find_user"
             app:layout_constraintBottom_toTopOf="@+id/label_illustration"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:contentDescription="@string/text_illustartion" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/label_illustration"

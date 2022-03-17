@@ -11,13 +11,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyGithub">
+        <activity android:name=".ui.favorite.UserFavoriteActivity" android:parentActivityName=".ui.search.UserSearchActivity"></activity>
+        <activity
+            android:name=".ui.setting.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName=".ui.search.UserSearchActivity" />
         <activity android:name=".ui.splashscreen.SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.search.UserSearchActivity"/>
+        <activity android:name=".ui.search.UserSearchActivity" />
         <activity
             android:name=".ui.detail.DetailUserActivity"
             android:parentActivityName=".ui.search.UserSearchActivity" />
