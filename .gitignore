@@ -13,4 +13,9 @@
 .externalNativeBuild
 .cxx
 local.properties
-/gradle.properties
+gradle.properties
+My Github.zip
+build.gradle
+gradlew
+gradlew.bat
+settings.gradle
