@@ -23,6 +23,7 @@ import com.aprianto.mygithub.utils.Helper
 import com.bumptech.glide.Glide
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.tabs.TabLayoutMediator
+import java.lang.NullPointerException
 import java.util.*
 
 
@@ -71,9 +72,9 @@ class DetailUserActivity : AppCompatActivity() {
             this.userData.observe(mContext, { data ->
                 binding.apply {
                     tvUsername.text = StringBuilder("@").append(data.login)
-                    tvName.text = data.name
-                    tvLocation.text = data.location
-                    tvCompany.text = data.company
+                    tvName.text = getDefaultValue(data.name,"Name not set")
+                    tvLocation.text = getDefaultValue(data.location)
+                    tvCompany.text = getDefaultValue(data.company)
                     tvFollowers.text = data.followers.toString()
                     tvFollowing.text = data.following.toString()
                     tvRepository.text = data.publicRepos.toString()
@@ -141,6 +142,18 @@ class DetailUserActivity : AppCompatActivity() {
                 }
             }
         }
+    }
+
+    private fun getDefaultValue(value: String, defaultValue:String="-"):String{
+        try {
+            if (value.isNotEmpty()){
+                return value
+            }
+        } catch (e: NullPointerException) {
+            e.printStackTrace()
+        }
+        return defaultValue
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

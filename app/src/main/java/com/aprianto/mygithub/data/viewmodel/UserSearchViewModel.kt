@@ -4,8 +4,8 @@ import android.util.Log
 import android.view.View
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.aprianto.mygithub.UserSearch
-import com.aprianto.mygithub.UserSearchResult
+import com.aprianto.mygithub.data.model.UserSearch
+import com.aprianto.mygithub.data.model.UserSearchResult
 import com.aprianto.mygithub.data.repository.remote.ApiConfig
 import retrofit2.Call
 import retrofit2.Callback

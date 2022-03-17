@@ -1,4 +1,4 @@
-package com.aprianto.mygithub
+package com.aprianto.mygithub.data.model
 
 import com.google.gson.annotations.SerializedName
 

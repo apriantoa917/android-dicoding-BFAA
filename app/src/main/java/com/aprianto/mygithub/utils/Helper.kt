@@ -22,6 +22,7 @@ object Helper {
     fun getSimpleDateFormat(dateValue: String): String {
         val date = dateFormat.parse(dateValue)
         val simpleDate = SimpleDateFormat("dd MMM yyyy HH.mm", Locale.getDefault())
+        @Suppress("NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS")
         return simpleDate.format(date)
     }
 

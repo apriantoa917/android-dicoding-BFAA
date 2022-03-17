@@ -32,7 +32,7 @@ class UserSocialAdapter :
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val socialData = data[position]
         holder.apply {
-            tvUsername.text = StringBuilder("@").append(socialData.login)
+            tvUsername.text = socialData.login
             Glide.with(itemView)
                 .load(socialData.avatarUrl)
                 .into(imgAvatar)

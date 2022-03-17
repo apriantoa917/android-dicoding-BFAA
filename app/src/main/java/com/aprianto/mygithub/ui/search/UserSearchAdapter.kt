@@ -7,7 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.aprianto.mygithub.R
-import com.aprianto.mygithub.UserSearchResult
+import com.aprianto.mygithub.data.model.UserSearchResult
 import com.aprianto.mygithub.ui.detail.DetailUserActivity
 import com.aprianto.mygithub.utils.Constanta
 import com.bumptech.glide.Glide
