@@ -10,16 +10,16 @@ dari repository ini akan dikenakan sanksi oleh Dicoding
 - Token Github API dapat dibuat pada halaman [setting][settingToken] atau dapat melihat tutorial [berikut][dicodingTutorialAPI] 
 - Ganti Token API pada file `gradle.properties` seperti berikut. Halaman file [gradle.properties][fileGradleProperties] 
     ```gradle
-    ...
+    ..
     GITHUB_TOKEN = "<YOUR_API_TOKEN>" // ubah menjadi "ghp_La..."
-    ...
+    ..
     ```
 - Repository ini memuat 3 project submission (submission 1, 2 dan 3). Masing-masing submsission dikelompokan menjadi branch berikut.
-    | Submission | Branch |
-    | ------ | ------ |
-    | Submission 1 | [Branch Submission 1][branch1] |
-    | Submission 2 | [Branch Submission 2][branch2] |
-    | Submission 3 | [Branch Submission 3][branch3] |
+    | Submission | Branch | Review Rating |
+    | ------ | ------ | ------ |
+    | Submission 1 | [Branch Submission 1][branch1] | ⭐⭐⭐⭐ |
+    | Submission 2 | [Branch Submission 2][branch2] | ⭐⭐⭐⭐⭐ |
+    | Submission 3 | [Branch Submission 3][branch3] | ⭐⭐⭐⭐⭐ |
 
 ## 📱 Gambaran Aplikasi (Submission 3, Complete)
 ### 🌞 Light Mode
