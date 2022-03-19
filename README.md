@@ -64,7 +64,7 @@ dari repository ini akan dikenakan sanksi oleh Dicoding
 - [x] **[Additional Features]** SplashScreen Activity
 - [x] **[Additional Features]** Custom toolbar dengan tambahan icon & menu
 
-### 2️⃣ Submission 3
+### 3️⃣ Submission 3
 - [x] Semua fitur Submission 1 & 2
 - [x] Penerapan local persistent dengan Data Store & Room Database
 - [x] Tamabahan fitur like / favoritekan user github dengan penyimpanan internal aplikasi menggunakan Room Database
