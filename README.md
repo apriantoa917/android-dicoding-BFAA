@@ -1,8 +1,7 @@
 # Submission Kelas Dicoding : Belajar Fundamental Aplikasi Android (BFAA)
 
-## ⚠️ Perhatian
-> Repository ini ditunjukan sebagai **`REFERENSI`** saja dari kelas Dicoding [Belajar Fundamental Aplikasi Android (BFAA)][dicodingClass]. Segala bentuk plagiasi untuk submission BFAA dicoding yang dilakukan 
-dari repository ini akan dikenakan sanksi oleh Dicoding
+## ⚠️ Disclaimer
+> Repository ini ditunjukan sebagai **`REFERENSI`** saja dari submission kelas Dicoding [Belajar Fundamental Aplikasi Android (BFAA)][dicodingClass]. Segala bentuk plagiasi untuk submission BFAA dicoding yang dilakukan dari repository ini akan dikenakan sanksi oleh Dicoding
 
 ## 👉 Petunjuk
 - Uji Coba aplikasi dapat diunduh pada halaman [berikut][appURL].
@@ -11,7 +10,7 @@ dari repository ini akan dikenakan sanksi oleh Dicoding
 - Ganti Token API pada file `gradle.properties` seperti berikut. Halaman file [gradle.properties][fileGradleProperties] 
     ```gradle
     ..
-    GITHUB_TOKEN = "<YOUR_API_TOKEN>" // ubah menjadi "ghp_La..."
+    GITHUB_TOKEN = "<YOUR_API_TOKEN>" // ubah menjadi "ghp_Laxxxxxx..."
     ..
     ```
 - Repository ini memuat 3 project submission (submission 1, 2 dan 3). Masing-masing submsission dikelompokan menjadi branch berikut.
