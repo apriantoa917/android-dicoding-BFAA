@@ -73,6 +73,12 @@
 - [x] **[Additional Features]** Tambahan mode auto pada tema perangkat, menyesuaikan tema device (android versi 8+)
 - [x] **[Additional Features]** Penerapan custom font untuk aplikasi
 
+## 🏆 MAD Score
+Modern Android Developement (MAD) Score adalah scorecard / acuan penilaian android untuk menunjukan seberapa modern dari teknologi yang kamu adaptasi [(Android)](https://developer.android.com/modern-android-development/scorecard?hl=id)
+<a href="https://madscorecard.withgoogle.com/scorecard/share/4197000331/">![summary](https://user-images.githubusercontent.com/47800225/159169005-939e75dd-ce5c-4e7e-807a-6567afbab6f1.png)</a>
+
+
+
 [dicodingClass]: <https://www.dicoding.com/academies/14>
 [appURL]: <https://www.dropbox.com/s/lbyxu7woltwjxfh/app-debug.apk?dl=0s>
 [settingToken]: <https://github.com/settings/tokens>
